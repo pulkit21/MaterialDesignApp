@@ -17,7 +17,9 @@ public class TextActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

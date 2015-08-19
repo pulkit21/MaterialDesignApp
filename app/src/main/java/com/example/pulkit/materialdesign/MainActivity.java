@@ -1,6 +1,8 @@
 package com.example.pulkit.materialdesign;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.appBar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        NavDrawerFragment navDrawerFragment = (NavDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentNavDrawer);
+        navDrawerFragment.setUp(R.id.fragmentNavDrawer, (DrawerLayout)findViewById(R.id.drawer_layout), toolbar);
     }
 
 

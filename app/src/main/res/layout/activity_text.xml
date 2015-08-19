@@ -1,12 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pulkit.materialdesign.TextActivity">
+    tools:context=".TextActivity">
 
     <include android:id="@+id/contactBar"
         layout="@layout/contact_bar"/>
 
-    <TextView android:text="This is my Second Activity"
+    <TextView android:text="@string/activity_text_message"
         android:layout_below="@+id/contactBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
