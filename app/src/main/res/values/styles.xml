@@ -8,4 +8,8 @@
         <item name="android:colorAccent">#DCCDE8</item>
     </style>
 
+    <style name="MyCustomToolBar" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorSecondary">@color/colorSecondary</item>
+    </style>
+
 </resources>

@@ -66,6 +66,9 @@ public class NavDrawerFragment extends Fragment {
                 getActivity().invalidateOptionsMenu();
             }
 
+//            TODO: If you want to use the navigation Drawer below the toobar
+//            TODO: then enable the belows code to use the color effect on your toolbar and change the layout in main from
+//            TODo: activity_main to activity_main_appbar
 //            @Override
 //            public void onDrawerSlide(View drawerView, float slideOffset) {
 //                if (slideOffset < 0.6) {
