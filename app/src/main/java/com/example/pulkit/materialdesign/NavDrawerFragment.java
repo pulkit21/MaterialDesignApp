@@ -2,6 +2,7 @@ package com.example.pulkit.materialdesign;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NavDrawerFragment extends Fragment {
+public class NavDrawerFragment extends Fragment implements NavDrawerAdapter.ClickListener {
 
     private RecyclerView recyclerView;
     private View containerView;
@@ -53,6 +54,7 @@ public class NavDrawerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_nav_drawer, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.rvList);
         adapter = new NavDrawerAdapter(getActivity(), getData());
+        adapter.setClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
         return view;
@@ -131,4 +133,8 @@ public class NavDrawerFragment extends Fragment {
     }
 
 
+    @Override
+    public void itemClicked(View view, int position) {
+        startActivity(new Intent(getActivity(),TextActivity.class));
+    }
 }
