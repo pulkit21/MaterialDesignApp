@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="#123433"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:text="1st page"
+    android:id="@+id/tabFragment"
+    android:layout_width="match_parent">
+
+</TextView>
