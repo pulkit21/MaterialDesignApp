@@ -25,7 +25,7 @@
             android:layout_gravity="start"
             android:layout_height="match_parent"
             app:layout="@layout/fragment_nav_drawer"
-            android:name="com.example.pulkit.materialdesign.NavDrawerFragment"
+            android:name="com.example.pulkit.materialdesign.fragments.NavDrawerFragment"
             tools:layout="@layout/fragment_nav_drawer">
 
         </fragment>

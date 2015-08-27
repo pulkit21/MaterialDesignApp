@@ -1,7 +1,6 @@
-package com.example.pulkit.materialdesign;
+package com.example.pulkit.materialdesign.activities;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -10,13 +9,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.pulkit.materialdesign.R;
+import com.example.pulkit.materialdesign.fragments.FragmentBoxOffice;
+import com.example.pulkit.materialdesign.fragments.FragmentSearch;
+import com.example.pulkit.materialdesign.fragments.FragmentUpcoming;
+import com.example.pulkit.materialdesign.fragments.NavDrawerFragment;
+import com.example.pulkit.materialdesign.fragments.TabFragment;
 
 import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
     private Toolbar toolbar;
     private MaterialTabHost tabHost;
     private ViewPager viewPager;
+
+    public static final int MOVIES_SEARCH_RESULT = 0;
+    public static final int MOVIES_HITS = 1;
+    public static final int MOVIES_INCOMING = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,8 +112,21 @@ public class MainActivity extends AppCompatActivity implements MaterialTabListen
 
         @Override
         public Fragment getItem(int position) {
-            TabFragment tabFragment = TabFragment.getInstance(position);
-            return tabFragment;
+            Fragment fragment = null;
+//            TabFragment tabFragment = TabFragment.getInstance(position);
+//            return tabFragment;
+            switch (position) {
+                case MOVIES_SEARCH_RESULT:
+                    fragment = FragmentSearch.newInstance("","");
+                    break;
+                case MOVIES_HITS:
+                    fragment = FragmentBoxOffice.newInstance("","");
+                    break;
+                case MOVIES_INCOMING:
+                    fragment = FragmentUpcoming.newInstance("","");
+                    break;
+            }
+            return fragment;
         }
 
         @Override

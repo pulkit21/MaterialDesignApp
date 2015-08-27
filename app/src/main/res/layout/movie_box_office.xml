@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:minHeight="72dp">
+
+    <ImageView
+        android:id="@+id/movieThumbnail"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_launch_black_24dp" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:id="@+id/movieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="56dp"
+        android:gravity="right"
+
+        android:text="Hit man"
+        android:textSize="25dp"/>
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:id="@+id/movieReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/movieTitle"
+        android:text="2015-12-01"
+        android:textSize="18dp"/>
+
+    <RatingBar
+        style="@android:style/Widget.Holo.RatingBar.Indicator"
+        android:id="@+id/movieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:isIndicator="false"
+        android:layout_below="@+id/movieReleaseDate"
+        android:max="5"
+        android:numStars="0"/>
+
+</RelativeLayout>

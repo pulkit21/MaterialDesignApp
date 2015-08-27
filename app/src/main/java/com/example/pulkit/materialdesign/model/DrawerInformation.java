@@ -1,4 +1,4 @@
-package com.example.pulkit.materialdesign;
+package com.example.pulkit.materialdesign.model;
 
 import android.content.Intent;
 

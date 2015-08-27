@@ -1,4 +1,4 @@
-package com.example.pulkit.materialdesign;
+package com.example.pulkit.materialdesign.fragments;
 
 
 import android.content.Context;
@@ -13,6 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v7.widget.Toolbar;
+
+import com.example.pulkit.materialdesign.model.DrawerInformation;
+import com.example.pulkit.materialdesign.R;
+import com.example.pulkit.materialdesign.adapters.NavDrawerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
